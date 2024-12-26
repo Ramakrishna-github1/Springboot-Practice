@@ -16,6 +16,7 @@ pipeline {
        }
         stage('Build') {
             steps {
+                sh 'echo $JAVA_HOME'
                 sh './mvnw clean package'
             }
         }
